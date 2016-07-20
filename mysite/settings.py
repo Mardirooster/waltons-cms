@@ -77,6 +77,12 @@ STATICFILES_DIRS = (
 )
 SITE_ID = 1
 
+# List of finder classes that know how to find static files in various locations.
+STATICFILES_FINDERS = (
+    'django.contrib.staticfiles.finders.FileSystemFinder',
+    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+)
+
 
 TEMPLATES = [
     {
@@ -184,7 +190,13 @@ CMS_TEMPLATES = (
 
 CMS_PERMISSION = True
 
-CMS_PLACEHOLDER_CONF = {}
+CMS_PLACEHOLDER_CONF = {
+    'Page Content': {
+        'plugins': ['BootstrapContainerPlugin'],
+    },
+}
+
+CMS_CASCADE_PLUGINS = ('bootstrap3',)
 
 DATABASES = {
     'default': {

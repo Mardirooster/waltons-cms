@@ -14,6 +14,8 @@ urlpatterns = [
     url(r'^sitemap\.xml$', 'django.contrib.sitemaps.views.sitemap',
         {'sitemaps': {'cmspages': CMSSitemap}}),
     url(r'^select2/', include('django_select2.urls')),
+    # redirects to static media files (css, javascript, images, etc.)
+	url(r'^static/(?P<path>.*)$', 'django.views.static.serve', {'document_root': 'static/'}),
 ]
 
 urlpatterns += i18n_patterns('',
