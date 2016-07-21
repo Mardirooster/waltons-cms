@@ -11,6 +11,8 @@ from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 admin.autodiscover()
 
 urlpatterns = [
+    url(r'^', include('djangocms_forms.urls')),
+    url(r'^polls/', include('polls.urls', namespace='polls')),
     url(r'^sitemap\.xml$', 'django.contrib.sitemaps.views.sitemap',
         {'sitemaps': {'cmspages': CMSSitemap}}),
     url(r'^select2/', include('django_select2.urls')),

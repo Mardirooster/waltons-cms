@@ -1,4 +1,5 @@
 import os
+
 gettext = lambda s: s
 DATA_DIR = os.path.dirname(os.path.dirname(__file__))
 """
@@ -156,7 +157,12 @@ INSTALLED_APPS = [
     'djangocms_inherit',
     'djangocms_link',
     'reversion',
-    'mysite'
+    'mysite',
+    'polls',
+    'polls_cms_integration',
+    'djangocms_forms',
+    'aldryn_style',
+    'aldryn_bootstrap3',
 ]
 
 LANGUAGES = (
@@ -197,6 +203,19 @@ CMS_PLACEHOLDER_CONF = {
 }
 
 CMS_CASCADE_PLUGINS = ('bootstrap3',)
+
+from django.utils.translation import ugettext_lazy as _
+
+DJANGOCMS_FORMS_PLUGIN_MODULE = _('Forms')
+
+DJANGOCMS_FORMS_PLUGIN_NAME = _('Form')
+
+DJANGOCMS_FORMS_TEMPLATES = (
+    ('/djangocms_forms/form_template/default.html', _('Default')),
+    ('form.html', _('Test')),
+)
+
+DJANGOCMS_FORMS_USE_HTML5_REQUIRED = False
 
 DATABASES = {
     'default': {
