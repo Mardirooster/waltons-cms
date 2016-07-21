@@ -161,7 +161,6 @@ INSTALLED_APPS = [
     'polls',
     'polls_cms_integration',
     'djangocms_forms',
-    'aldryn_style',
     'aldryn_bootstrap3',
 ]
 
@@ -205,6 +204,12 @@ CMS_PLACEHOLDER_CONF = {
 CMS_CASCADE_PLUGINS = ('bootstrap3',)
 
 from django.utils.translation import ugettext_lazy as _
+
+CMS_STYLE_NAMES = (
+    ('info', _("info")),
+    ('new', _("new")),
+    ('hint', _("hint")),
+)
 
 DJANGOCMS_FORMS_PLUGIN_MODULE = _('Forms')
 
