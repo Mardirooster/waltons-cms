@@ -141,6 +141,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'cms',
     'menus',
+    'mptt',
     'sekizai',
     'treebeard',
     'djangocms_text_ckeditor',

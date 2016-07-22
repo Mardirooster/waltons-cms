@@ -1,85 +1,48 @@
-section.fill-viewport {
-  height: 600px;
+
+.dropdown-submenu {
+    position: relative;
 }
 
-#section-1 {
-  width: 100%;
-  background: #0b486b;
-  padding: 40px 0 30px 0;
-  display: table;
-  color: white;
-  z-index: 0;
-}
-#section-1 div.welcome-div {
-  height: 100%;
-  text-align: cente;
+.dropdown-submenu>.dropdown-menu {
+    top: 0;
+    left: 100%;
+    margin-top: -6px;
+    margin-left: -1px;
+    -webkit-border-radius: 0 6px 6px 6px;
+    -moz-border-radius: 0 6px 6px;
+    border-radius: 0 6px 6px 6px;
 }
 
-header.navbar-wrapper {
-  margin-top: 0px;
-  z-index: 9999;
+.dropdown-submenu:hover>.dropdown-menu {
+    display: block;
 }
-@media (max-width: 768px) {
-  header.navbar-wrapper {
-    margin: 0;
-  }
-  header.navbar-wrapper .container {
-    padding: 0;
-  }
-}
-header.navbar-wrapper .navbar-toggle {
-  margin: 8px 15px;
-}
-header.navbar-wrapper .navbar {
-  padding: 0px 12px;
-}
-@media (min-width: 768px) {
-  header.navbar-wrapper .navbar-collapse {
+
+.dropdown-submenu>a:after {
+    display: block;
+    content: " ";
     float: right;
-  }
+    width: 0;
+    height: 0;
+    border-color: transparent;
+    border-style: solid;
+    border-width: 5px 0 5px 5px;
+    border-left-color: #ccc;
+    margin-top: 5px;
+    margin-right: -10px;
 }
 
-@media(min-width: 768px) and (max-width: 992px) {
-  .navbar-collapse {
-    padding: 0;
-  }
-}
-#scroll-wrap {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
+.dropdown-submenu:hover>a:after {
+    border-left-color: #fff;
 }
 
-header {
-  left: 0;
-  right: 0;
-}
-header.affix-top {
-  position: absolute;
-  top: 528px;
-}
-header.affix {
-  position: fixed;
-  top: 0px !important;
+.dropdown-submenu.pull-left {
+    float: none;
 }
 
-@media (max-width: 768px) {
-  #scroll-wrap {
-    bottom: 0;
-    top: 52px;
-    overflow: scroll;
-    -webkit-overflow-scrolling: touch;
-  }
-
-  header {
-    position: absolute !important;
-    top: 0px !important;
-    right: 0;
-    left: 0;
-    z-index: 9999;
-  }
-  header .navbar {
-    margin-bottom: 0px !important;
-  }
+.dropdown-submenu.pull-left>.dropdown-menu {
+    left: -100%;
+    margin-left: 10px;
+    -webkit-border-radius: 6px 0 6px 6px;
+    -moz-border-radius: 6px 0 6px 6px;
+    border-radius: 6px 0 6px 6px;
 }
