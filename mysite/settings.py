@@ -126,10 +126,12 @@ MIDDLEWARE_CLASSES = [
     'cms.middleware.user.CurrentUserMiddleware',
     'cms.middleware.page.CurrentPageMiddleware',
     'cms.middleware.toolbar.ToolbarMiddleware',
-    'cms.middleware.language.LanguageCookieMiddleware'
+    'cms.middleware.language.LanguageCookieMiddleware',
+    'django_pdb.middleware.PdbMiddleware',
 ]
 
 INSTALLED_APPS = [
+    'django_pdb',
     'djangocms_admin_style',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -222,7 +224,7 @@ DJANGOCMS_FORMS_TEMPLATES = (
     ('form.html', _('Test')),
 )
 
-DJANGOCMS_FORMS_USE_HTML5_REQUIRED = False
+DJANGOCMS_FORMS_USE_HTML5_REQUIRED = True
 
 DATABASES = {
     'default': {
