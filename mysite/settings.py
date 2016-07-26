@@ -229,12 +229,13 @@ DJANGOCMS_FORMS_USE_HTML5_REQUIRED = True
 DATABASES = {
     'default': {
         'CONN_MAX_AGE': 0,
-        'ENGINE': 'django.db.backends.sqlite3',
+        #'ENGINE': 'django.db.backends.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'HOST': 'localhost',
-        'NAME': 'project.db',
-        'PASSWORD': '',
-        'PORT': '',
-        'USER': ''
+        'NAME': 'djangocms',
+        'PASSWORD': 'waltons',
+        'PORT': '5432',
+        'USER': 'djangocmsuser'
     }
 }
 
